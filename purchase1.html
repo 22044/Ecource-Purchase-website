@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>AngularJS Expression</title>
+        <script src=https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.js></script>
+    </head>
+    <style>
+        body{
+            background-image: url("img/h.jpg");
+            font-family: Candara Light;
+            font-size: 25px;
+            text-align: center;
+            
+           }
+           .c{
+               text-align: center;  
+               color: rgb(2, 1, 1);
+               padding: 12px ;
+               padding-left: 10px;
+               padding-bottom: 0px;
+              font-size: 25px;
+           }
+           .head{
+               color: rgb(59, 56, 56);
+           }
+          
+            
+        form{
+            display: inline-block;
+            text-align: center;
+        }
+
+        .box{
+            background-color: transparent;
+            color: white;
+            margin: 40px;
+                                     
+            }  
+            
+            input[type="text"]{
+
+            font-family: Candara Light;   
+            background: transparent;
+            border-color: rgb(18, 18, 18);
+            border-radius :20px;
+            color: rgb(5, 108, 113);
+            font-size: 18px;
+            outline: none;
+            padding: 10px;     
+            font-weight: bold;
+            
+        }
+
+           input[type="button"]{
+               align-self: center;
+               background-color: rgb(20, 20, 15);
+               color: white;
+               font-family: Candara Light;
+               border-radius: 8px;
+               font-size: 14px;
+               
+           }
+
+        .t{
+            font-size: 28px;
+            color: rgb(10, 9, 9);
+        }
+       .e{
+           background-color: black;
+           padding: 80px;
+           margin: 20;
+           
+        }
+        .top {
+  overflow: auto;
+  align-self: center;
+  margin: 80px;
+ 
+  
+}
+        
+    </style>
+
+
+    <body>       
+        <div class="c">
+            <h1>Shopping Cart</h1>
+        </div> 
+        <h1 class="head"> You Have Selected Ai Cource of 3 Months</h1>
+
+        <form class="box" name="myform">
+            
+            <div ng-app="">
+                <table>
+                    <tr>
+                        <td>First Name:-</td>
+                        <td><input type="text" ng-model="FirstName" name="fname"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:-</td>
+                        <td><input type="text" ng-model="LastName" name="lname"></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity:-</td>
+                        <td><input type="text" ng-model="1" name="Q" ></td>
+                    </tr>
+                    <tr>
+                        <td>Cost:-</td>
+                        <td><input type="text" ng-model="14999" name="cost" ></td>
+                    </tr>
+                    <tr class="btn">
+                        <td><input type="button" value="Place Order" ng-click="message = FirstName + ' ' + LastName + ' has to pay'+' ' + 14999  * 1 "/></td><br> <br>   
+                    </tr>
+                   
+                </table>
+                <table class="t">
+                    <h2 class="t">{{message}}</h2>              
+               </table>
+               <div class="top">
+                  <table>
+                      <tr>
+                          <td><img src="img/c1.png" height="70px"></td>
+                          <td></td>
+                          <td><img src="img/c2.png" height="70px"></td>
+                          <td></td>
+                          <td><img src="img/c3.png" height="70px"></td>
+
+                      </tr>
+                  </table>
+               </div>
+        </form>    
+    </div>
+    </body>
+</html>

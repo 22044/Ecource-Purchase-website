@@ -1,0 +1,259 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Homepage</title>
+    <style>
+
+ /*<!-- HTML -->
+<a href="#google"></a>
+<div id="google"></div>
+
+/*CSS
+
+html { scroll-behavior: smooth; } 
+*/
+      
+    /*  to scroll Full Website*/
+    
+    body {
+      margin: 0;
+     overflow: hidden;
+     background-color: gray;
+      font-family: Candara Light;
+      font-weight: bold;
+      }
+     
+    *{
+      padding: 10;
+      margin: 0;
+      text-decoration: gray;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    nav{
+      background-color: black;
+      height: 80px;
+      width: 100%;
+
+    }
+    label.logo{
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 100px;
+      font-weight: bold;
+    }
+    nav ul{
+      float: right;
+      margin-right: 20px;
+    }
+    nav ul li{
+     display: inline-block;
+     line-height: 80px;
+     margin: 0 5px;
+    }
+
+    nav ul li a{
+      color: white;
+      border-radius: 20px;
+      font-size: 17px;
+      padding: 7px 13px;
+      text-transform: uppercase;
+    }
+    a.active,a:hover{
+      background-color:gray;
+      -ms-scroll-translation: a5;
+    }
+
+   
+    #check{
+      display: none;
+    }
+    @media(max-width:952px)
+    {
+      label.logo{
+        font-size: 30px;
+        padding-left: 50%;
+
+      }
+      nav ul li a{
+        font-size: 16px;
+      }
+    }
+    @media(max-width:858px){
+      .checkbtn{
+        display:  block;
+
+      }
+      ul{
+        position: fixed ;
+        width:100%;
+        height: 100vh;
+        background-image: url("img/b.jpg");
+        top:80px;
+        left: -100;
+        text-align: center;
+        transition: all .5s;
+      }
+      nav ul li a{
+        font-size: 20px;
+      }
+      a:hover,a.active{
+        background: none;
+        color:#444549;
+      }
+      #check:checked ~ ul{
+        left:0;
+      }
+    }
+  
+   .box{
+      border-radius: 55px;
+      width: 400px;
+      position: absolute;
+      padding: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-color: darkgrey;
+      background-size: cover;
+      text-align: center;
+      z-index: 2;
+   }
+   .img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+   }
+  
+   .box h1{
+       color: darkslategrey;
+       text-transform: uppercase;
+       font-weight:700;
+  
+   }
+  
+   .box input[type="text"].box input[type="password"]
+   {
+     border: radius 25px;;
+     background: none;
+     display: block;
+     margin:20px auto;
+     text-align: center;
+     border: 3px black;
+     
+     width: 220px;
+     outline: none;
+     border-radius: 24px;
+     -ms-scroll-translation: 0.25px;
+
+   }
+   .box input[type="text"]:focus,.box input[type="password"]
+   {
+      border: orange;
+           
+   }
+   .box input[type="submit"]
+   {
+     border: 5;
+     font-size: larger;
+     font-weight: bold;
+    display: block;
+     margin:20px auto;
+     text-align: center;
+     border: 3px black;
+     width: 220px;
+     outline: none;
+     border-radius: 25px;
+     -ms-scroll-translation: 0.25px;
+     cursor: pointer;
+   }
+   .box input[type="submit"]
+   {
+      background: orange;
+   }
+   .box input[type="submit"]:hover
+   {
+      background: rgb(236, 187, 95);
+   }
+
+  .box input[type="text"]
+  {
+   border-radius: 20px;
+  border: 1px solid #000000;
+   width: 200px;
+  height: 30px;
+  }
+  .box input[type="password"]
+  {
+   border-radius: 20px;
+  border: 1px solid #000000;
+   width: 200px;
+  height: 30px;
+  }
+ .video-container{
+        position:initial;
+        top: 18;
+        left:0;
+        width:100% ;
+    }
+  
+ </style>
+  </head>
+
+<body>
+  
+  <script>
+      function  validateform(){
+        var name=document.myform.name.value;
+        var password=document.myform.password.value;
+        
+        
+        if(name==null || name==""){
+          alert("Username Can't Be Blank");
+          return false;
+          }
+   
+          else if(password!="Admin" || password==null || password=="" || password.lenght>6){
+            alert("Enter valid Password");
+            return false;
+          }
+        }
+        </script>
+  <nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"> </i>
+  </label>
+  <label class="logo">NSE</label>
+  <ul>
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="#">Contacts</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">FAQ</a></li>
+  </ul>
+</nav>
+  <body>
+    <form class="box" name="myform" method="post" action="page1.html" onsubmit=" validateform()">
+      <h1>Login</h1>
+      <img src="D:\SEM 2\ITW\Project\img\c.png" class="img">
+      Username:-  <input type="text" name="name"><br>    
+      Password:-&nbsp;&nbsp;<input type="password" name="password"><br>
+         <input type="submit" value="Submit">
+
+      <a href="signup.html">Sign Up</a>  
+    </form>
+    <div class="video-container">
+      <video autoplay loop muted>
+          <source src="D:\SEM 2\ITW\Project\video\key.mp4" type="video/mp4">
+      </video>    
+  </body>
+</html>
